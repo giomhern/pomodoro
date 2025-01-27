@@ -41,6 +41,7 @@ func (w *widgets) update(timer []int, txtType, txtInfo, txtTimer string, redrawC
 	redrawCh <- true
 }
 
+// Define all of the widgets at initial runtime / render
 func newWidgets(ctx context.Context, errorCh chan<- error) (*widgets, error) {
 	w := &widgets{}
 
