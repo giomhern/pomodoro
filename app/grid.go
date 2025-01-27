@@ -69,10 +69,10 @@ func newGrid(b *buttonSet, w *widgets, t terminalapi.Terminal) (*container.Conta
 	}
 
 	// Create and return the container
-	c, err := container.New(t, gridOpts...)
+	container, err := container.New(t, gridOpts...)
 	if err != nil {
 		return nil, err
 	}
 
-	return c, nil
+	return container, nil
 }
